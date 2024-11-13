@@ -1,0 +1,43 @@
+# bsp, stack or float
+yabai -m config layout bsp
+
+yabai -m config window_placement second_child
+
+
+# padding
+yabai -m config top_padding 40
+yabai -m config bottom_padding 40
+yabai -m config left_padding 40
+yabai -m config right_padding 40
+yabai -m config window_gap 40
+
+# borders
+yabai -m config window_border on
+yabai -m config window_border_width 8
+yabai -m config active_window_border_color 0xffe1e3e4
+yabai -m config insert_feedback_color 0xffe1e3e4
+yabai -m config normal_window_border_color 0xff494df64
+# mouse settings
+yabai -m config mouse_follows_focus on
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m mouse_drop_action swap
+
+# disabled apps
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Messages$" manage=off
+yabai -m rule --add app="^설정" manage=off
+yabai -m rule --add app="^메시지$" manage=off
+yabai -m rule --add app="^계산기$" manage=off
+yabai -m rule --add app="^Terminal$" manage=off
+# yabai -m rule --add app="^iTerm2$" manage=off
+yabai -m rule --add app="^iTerm2$" manage=on
+yabai -m rule --add app="^iTerm$" manage=on
+# # transparency
+# yabai -m rule --add app="^Visual Studio Code$" opacity=0.25 
+# yabai -m rule --add app="^Code$" opacity=0.25 
+
+borders hidpi=on ax_focus=on active_color=0xffe1e3e4 inactive_color=0xff494d64 width=8 &
